@@ -212,4 +212,16 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+
+    public function actionSalam()
+    {
+        return $this->render('salam',
+        [
+            'nama' => 'Rizky Hidayat Panjaitan',
+            'alamat' => 'Tanjung Balai'
+        ]
+        );
+        
+    }
+
 }
