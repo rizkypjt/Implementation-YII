@@ -2,5 +2,6 @@
 
 <?php
     echo $nama;
-    echo ' <br>Alamat :' .$alamat;
+    echo ' <br>Alamat 
+    :' .$alamat;
 ?>
