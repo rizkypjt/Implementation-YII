@@ -2,7 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
+use frontend\models\KategoriMember;
+use yii\helpers\ArrayHelper;
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Member */
 /* @var $form yii\widgets\ActiveForm */
@@ -21,6 +22,19 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'gender')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'user_id')->textInput() ?>
+
+    <?php 
+        //use app\models\Country;
+        $ar_kategori=KategoriMember::find()->all();
+
+        //use yii\helpers\ArrayHelper;
+        $listData=ArrayHelper::map($ar_kategori,'id','nama');
+        
+        echo $form->field($model, 'kategori_id')->dropDownList(
+            $listData,
+            ['prompt'=>'Select...']
+            );
+    ?>
 
     <?= $form->field($model, 'kategori_id')->textInput() ?>
 

@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model frontend\models\Member */
+/* @var $model frontend\models\Locker */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Members', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Lockers', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="member-view">
+<div class="locker-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -29,16 +29,15 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'nama_lengkap',
-            'telpon',
-            'institusi',
-            'gender',
-            'user_id',
-            // 'kategori_id',
-            'kategori.nama',
-            // 'created_at',
-            // 'updated_at',
-            // 'deleted_at',
+            'short_deskripsi',
+            'deskripsi:ntext',
+            'tags',
+            'tgl_mulai',
+            'tgl_akhir',
+            'member_id',
+            'created_at',
+            'updated_at',
+            'deleted_at',
         ],
     ]) ?>
 

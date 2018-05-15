@@ -10,11 +10,13 @@ return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
+    'homeUrl' => '/mywebYII/administrator',
     'bootstrap' => ['log'],
     'modules' => [],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
+            'baseUrl' => '/mywebYII/administrator',
         ],
         'user' => [
             'identityClass' => 'common\models\User',

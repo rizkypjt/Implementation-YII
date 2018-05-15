@@ -4,15 +4,26 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model frontend\models\KategoriMember */
+/* @var $model frontend\models\Locker */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="kategori-member-form">
+<div class="locker-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'nama')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'short_deskripsi')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'deskripsi')->textarea(['rows' => 6]) ?>
+
+    <?= $form->field($model, 'tags')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'tgl_mulai')->textInput() ?>
+    
+
+    <?= $form->field($model, 'tgl_akhir')->textInput() ?>
+
+    <!-- <?= $form->field($model, 'member_id')->textInput() ?> -->
 
     <!-- <?= $form->field($model, 'created_at')->textInput() ?> -->
 
